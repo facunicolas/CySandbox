@@ -1,0 +1,23 @@
+{
+  "name": "cypractice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "runner": "cypress open --e2e --browser=chrome"
+  },
+  "keywords": [
+    "cypress",
+    "practice"
+  ],
+  "author": "Facundo",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.5",
+    "cypress": "^13.9.0"
+  },
+  "dependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "cypress-real-events": "^1.12.0"
+  }
+}
