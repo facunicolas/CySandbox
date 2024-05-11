@@ -14,7 +14,9 @@
   "description": "",
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.5",
-    "cypress": "^13.9.0"
+    "cy-verify-downloads": "^0.2.4",
+    "cypress": "^13.9.0",
+    "cypress-file-upload": "^5.0.8"
   },
   "dependencies": {
     "@cypress/xpath": "^2.0.3",

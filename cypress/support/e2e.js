@@ -15,8 +15,9 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-import "cypress-real-events"
+import "cypress-real-events" //? real events, like mouse clicks and movements
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-require('@cypress/xpath')
+require('@cypress/xpath') //? to use xpath syntax to find elements
+require('cy-verify-downloads').addCustomCommand(); //? file download verifier

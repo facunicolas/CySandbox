@@ -23,4 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-require('@4tw/cypress-drag-drop')
+require('@4tw/cypress-drag-drop') //? drag and drop plugin command
+import 'cypress-file-upload'; //? file upload plugin import
+
+
