@@ -11,7 +11,7 @@ describe('Floating menu', () => {
         cy.get('#menu li:nth-child(4) a').should("be.visible") //ABOUT
     };
 
-    it('floating menu keeps in site after scrolling', () => {
+    it('floating menu keeps inside viewport after scrolling', () => {
         areMenuesVisible();
         cy.get('.scroll > :nth-child(3)').scrollIntoView() //Scroll to mid site
         areMenuesVisible();
