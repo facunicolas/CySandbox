@@ -9,4 +9,7 @@ module.exports = defineConfig({
       on('task', verifyDownloadTasks); // Download verifier implementation
     },
   },
+  env : {
+    demoqa : "https://demoqa.com",
+  }
 });

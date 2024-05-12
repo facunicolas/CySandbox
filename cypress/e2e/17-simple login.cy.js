@@ -5,12 +5,12 @@ describe("Login page", () => {
 
   function login (user, pass) {
     cy.get("#username").type(user);
-    cy.get("#password").type(password);
+    cy.get("#password").type(pass);
     cy.get(".fa").click();
   }
 
   it("wrong login attempt", () => {
-    login("worngUser", "worngPassword");
+    login("worngUser", "wrongPassword");
     cy.xpath("/html/body/div[1]/div/div/text()").then((message) => {
       let wrongUsernameMessage = message[0].data;
       expect(wrongUsernameMessage).to.contain("Your username is invalid");

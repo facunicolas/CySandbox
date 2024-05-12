@@ -5,24 +5,25 @@ describe('Login - cookies - session', () => {
     });
 
     //Simple login function without env variables
+    //Does not preserve session
+
     function login (user, password) { 
         cy.get('#userName').type(user);
         cy.get('#password').type(password);
         cy.get('#login').click();
-        cy.url().should("contain", "profile");
     }
     
-    it.only('successful login', () => {
-        cy.get('[href="/login"]').click();
-        login("test", "Test1234*");
-    });
-
     it('successful login', () => {
         cy.get('[href="/login"]').click();
-        // cy.get('#userName').type("test");
-        // cy.get('#password').type("Test1234*");
-        // cy.get('#login').click();
+        login("test", "Test1234*");
+        cy.url().should("contain", "profile");
     });
 
+    it('unsuccessful login', () => {
+        cy.get('[href="/login"]').click();
+        login("wrongUser", "Test1234*");
+        cy.get('#name').should("contain", "Invalid username or password!");
+        cy.url().should("not.contain", "profile");
+    });
 
 });
