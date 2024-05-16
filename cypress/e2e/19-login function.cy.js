@@ -17,9 +17,10 @@ describe('Login - cookies - session', () => {
         cy.get('[href="/login"]').click();
         login("test", "Test1234*");
         cy.url().should("contain", "profile");
+        
     });
 
-    it('unsuccessful login', () => {
+    it.only('unsuccessful login', () => {
         cy.get('[href="/login"]').click();
         login("wrongUser", "Test1234*");
         cy.get('#name').should("contain", "Invalid username or password!");

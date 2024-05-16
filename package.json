@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "runner": "cypress open --e2e --browser=chrome"
+    "runner": "cypress open --e2e --browser=chrome",
+    "record-runner": "cypress run --e2e --browser=chrome --record --key 4e40ac45-a45a-4974-b3f9-051019a13f8b"
   },
   "keywords": [
     "cypress",

@@ -35,7 +35,7 @@ describe("Login Api test", () => {
     });
   });
 
-  it("UNsuccessful login", () => {
+  it("Unsuccessful login", () => {
     cy.visit(`${Cypress.env("demoqa")}/login`);
 
     cy.intercept(

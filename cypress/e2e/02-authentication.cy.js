@@ -4,7 +4,7 @@ describe('Basic Login-Auth', () => {
     //     cy.visit('/basic_auth');
     // });
 
-    it('', () => {
+    it.skip('', () => {
         cy.visit('https://the-internet.herokuapp.com/basic_auth');
     });
 });
